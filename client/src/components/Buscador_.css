@@ -1,0 +1,36 @@
+.Container{
+    display: flex;
+    width: 100%;
+}
+.Input{
+    font-size: large;
+    border-radius: 5px;
+    border: 3px solid #754505;
+    background-color: #23181874;
+    color: #ffffff;
+    transition-duration: 0.5s;
+}
+.Buscar{
+    padding: 5px;
+    margin: 5px;
+    width: 100px;
+    font-size: large;
+    border-radius: 5px;
+    border: 3px solid #754505;
+    background-color: #23181874;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.Buscar:hover{
+    background-color: #1f7d25;
+    color: white;
+    border: 3px solid #1f7d25
+}
+.Input:hover{
+    background-color: #1f7d25ae;
+    color: white;
+    border: 3px solid #1f7d25
+}

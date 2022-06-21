@@ -1,0 +1,48 @@
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 60px;
+    /* margin: auto; */
+    position: relative;
+    border: 5px 
+    solid #754505;
+    z-index: 7;
+    background-image: url("https://img.freepik.com/foto-gratis/diseno-texturizado-madera-hermosa-fondo_53876-74989.jpg?w=2000");
+    
+}
+.menu li {
+    float: left;
+    width: 49.5%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 2px solid #75450500;
+   
+}
+.menu .a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    position: relative;
+    font-size: 18px;
+    z-index: 9;
+}
+.menu .a:hover{
+    color: black
+}
+li.slider {
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #652d27;
+    z-index: 8;
+    transition: left .4s, background-color .4s;
+}

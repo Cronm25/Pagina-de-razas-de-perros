@@ -1,0 +1,43 @@
+.landing {
+    margin: 0%;
+    background-image: url(https://images.unsplash.com/photo-1618584249128-dccb6d993399?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVlbGxhJTIwZGUlMjBwZXJyb3xlbnwwfHwwfHw%3D&w=1000&q=80);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+.myButton {
+	box-shadow: 3px 4px 0px 0px #a6827e;
+	background:linear-gradient(to bottom, #7d5d3b 5%, #543514 100%);
+	background-color:#7d5d3b;
+	border-radius:15px;
+	border:1px solid #e0c6af;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Georgia;
+	font-size:17px;
+	font-style:italic;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #4d3534;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #543514 5%, #7d5d3b 100%);
+	background-color:#543514;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.tittle { 
+    color: #171717;
+	font-family: 'Georgia', serif;
+	font-size: 36px;
+	font-weight: 400; 
+    font-style: italic;
+	line-height: 44px;
+	margin: 0 0 12px;
+	text-align: center;
+}

@@ -1,0 +1,35 @@
+.selectContainer{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    /* width: fit-content; */
+}
+.filters{
+    background: transparent;
+    margin: 5px 5px;
+    padding: 5px 5px;
+    font-size: large;
+    background-color: #2318185c;
+    color: #ffffff;
+    border: 3px solid #754505;
+    border-radius: 5px;
+}
+
+option{
+    color: black;
+}
+.lista{
+    width: 100%;
+    height: auto;
+    display: flex !important; 
+    flex-wrap: wrap;
+}
+.Cargando{
+    width: 100%;
+}
+.Cargando_h1{
+color: black;
+}
+.Cargando_gif{
+width: 50%;
+}
