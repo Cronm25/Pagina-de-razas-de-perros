@@ -228,7 +228,7 @@ export default function Formulario(){
                                 <input className={"createButton"} type='submit' name='submit'   />
                                 {errors && errors.image ?
                                     <p>Corregir imagen</p> : null
-                                }{errors && errors.temperaments<1 ?
+                                }{crear.temperaments.length < 2 ?
                                     <p>Agregar temperaments</p> : null
                                 }{errors && errors.anios_de_vidaMin ?
                                     <p>Corregir años Min</p> : null
