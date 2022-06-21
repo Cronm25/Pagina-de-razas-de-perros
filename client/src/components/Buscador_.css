@@ -34,3 +34,8 @@
     color: white;
     border: 3px solid #1f7d25
 }
+.Input:focus,  Input:active{
+    background-color:#1f7d25ae;
+    color: white;
+    border: 3px solid #1f7d25;
+}

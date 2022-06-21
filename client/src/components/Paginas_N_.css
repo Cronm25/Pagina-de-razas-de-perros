@@ -19,10 +19,14 @@
     margin: 0 4px;
 }
   
-.pagination li button.hovered {
-    background-color: #6d6d6d87;
+.pagination li button:hover {
+    background-color: #1f7d25;
     color: white;
     border: 1px solid #000000;
 }
   
-.pagination li button:hover:not(.hovered) {background-color: #1f7d25; color: white;}
+.pagination li button:focus, form button:active{
+    background-color:#00aae4;
+    color: #fbfcfc;
+    border: 1px solid #000000;
+}
