@@ -9,6 +9,8 @@ export const BUSCAR_POR_NOMBRE="BUSCAR_POR_NOMBRE"
 export const GET_DETALLE="GET_DETALLE"
 export const POST_DOGS = 'POST_DOGS'
 export const BORRARD = 'BORRARD'
+export const FILTRADO_POR_PESO = 'FILTRADO_POR_PESO'
+
 
 
 export function getDogs(){
@@ -46,6 +48,12 @@ export function FiltradoPorTemperaments(payload){
 export function FiltradoPorBD(payload){
     return{
         type: FILTRADO_POR_BD,
+        payload
+    }
+}
+export function FiltradoPorPeso(payload){
+    return{
+        type: FILTRADO_POR_PESO,
         payload
     }
 }

@@ -1,7 +1,8 @@
+
 import {
     GET_DOGS,GET_TEMPERAMENTS,ORDEN_POR_NOMBRE,
     FILTRADO_POR_TEMPERAMENTS,FILTRADO_POR_BD,ORDEN_POR_PESO,
-    BUSCAR_POR_NOMBRE,GET_DETALLE,POST_DOGS,BORRARD
+    BUSCAR_POR_NOMBRE,GET_DETALLE,POST_DOGS,BORRARD,FILTRADO_POR_PESO
 } from "../actions/index.js"
 const initialState = {
     Dogs : [],
@@ -121,6 +122,21 @@ function rootReducer (state = initialState , action){
             ...state,
             Detalle:{}
         }
+        case FILTRADO_POR_PESO:
+            const All_Dogs__ = [...state.AllDogs];
+            const algo__=action.payload==="si"?
+            All_Dogs__.filter(el=>{
+                const x = Number(el.peso.split(" - ")[0])
+                if ( x>50) return el
+            }):
+            All_Dogs__.filter(el=>{
+                const x = Number(el.peso.split(" - ")[0]) 
+                if ( x<50) return el
+            })
+            return{
+                ...state,
+                Dogs: algo__,
+            }
         default:
             return state
     }

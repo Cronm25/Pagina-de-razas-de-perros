@@ -1,7 +1,7 @@
 import React from "react";
 import {useState,useEffect} from "react";
 import {useDispatch,useSelector} from "react-redux"
-import { getDogs,OrdenPorPeso,OrdenPorNombre,FiltradoPorTemperaments,getTemperaments,FiltradoPorBD} from "../actions";
+import { getDogs,OrdenPorPeso,OrdenPorNombre,FiltradoPorTemperaments,getTemperaments,FiltradoPorBD,FiltradoPorPeso} from "../actions";
 import Card from "./Card";
 import Paginado from "./Paginas_N";
 import Buscar from "./Buscador";
@@ -34,6 +34,12 @@ export default function Home (){
     function handleOrdenPeso(e){
         e.preventDefault();
         dispatch(OrdenPorPeso(e.target.value));
+        setCurrentPage(1);
+        setOrden(`Ordenado ${e.target.value}`)
+    }
+    function handleFiltroPeso(e){
+        e.preventDefault();
+        dispatch(FiltradoPorPeso(e.target.value));
         setCurrentPage(1);
         setOrden(`Ordenado ${e.target.value}`)
     }
@@ -71,6 +77,11 @@ export default function Home (){
                     <option value="default" disabled >Base de datos</option>
                     <option value="si">si</option>
                     <option value="no">no</option>
+            </select>
+            <select onChange={e=>handleFiltroPeso(e)} defaultValue='default' className="filters">
+                    <option value="default" disabled >Filtro peso </option>
+                    <option value="si">Max_50</option>
+                    <option value="no">Men_50</option>
             </select>
             <select onChange={e=>handleFiltroTemperaments(e)} defaultValue='default' className="filters">
                     <option value="default" disabled >Filtro de temperaments</option>
