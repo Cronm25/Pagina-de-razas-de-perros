@@ -8,10 +8,12 @@ export const ORDEN_POR_NOMBRE="ORDEN_POR_NOMBRE"
 export const BUSCAR_POR_NOMBRE="BUSCAR_POR_NOMBRE"
 export const GET_DETALLE="GET_DETALLE"
 export const POST_DOGS = 'POST_DOGS'
+export const BORRARD = 'BORRARD'
+
 
 export function getDogs(){
     return async function(dispatch){
-        var json = await axios ("http://localhost:3001/dogs");
+        var json = await axios.get("http://localhost:3001/dogs");
         return dispatch({
         type:GET_DOGS,
         payload: json.data
@@ -58,6 +60,11 @@ export function OrdenPorNombre(payload){
     return{
         type: ORDEN_POR_NOMBRE,
         payload
+    }
+}
+export function BorrarD(){
+    return{
+        type: BORRARD,
     }
 }
 export function buscarpornombre(name) {

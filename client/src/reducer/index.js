@@ -1,7 +1,7 @@
 import {
     GET_DOGS,GET_TEMPERAMENTS,ORDEN_POR_NOMBRE,
     FILTRADO_POR_TEMPERAMENTS,FILTRADO_POR_BD,ORDEN_POR_PESO,
-    BUSCAR_POR_NOMBRE,GET_DETALLE,POST_DOGS
+    BUSCAR_POR_NOMBRE,GET_DETALLE,POST_DOGS,BORRARD
 } from "../actions/index.js"
 const initialState = {
     Dogs : [],
@@ -111,10 +111,16 @@ function rootReducer (state = initialState , action){
                 ...state,
                 Detalle: action.payload
             }
+            
         case POST_DOGS:
             return {
                 ...state
             }
+        case BORRARD:
+        return {
+            ...state,
+            Detalle:{}
+        }
         default:
             return state
     }

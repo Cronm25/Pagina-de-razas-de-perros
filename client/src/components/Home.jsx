@@ -93,12 +93,13 @@ export default function Home (){
                         }
                          image={el.image} createdInDb={el.createdInDb} key={el.id}/>
                     ))
-                }
-                </div>
+            }
+            </div>
             <Paginado 
             DogsPorPagina={DogsPorPagina}
             cantidad={dogs.length}
             paginado={paginado}
+            currentPage={currentPage}
             />
             </div>
         </div>

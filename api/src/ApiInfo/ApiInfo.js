@@ -51,9 +51,21 @@ const getAllDog = async () =>{
     
 }
 const getallTemperament = async function(){
-    const TemperamentList = getAllDog();
-    const repeated = await TemperamentList.map( d => d.temperaments).flat(1);
-    return [... new Set(repeated)]
+    try{
+    let TemperamentList= await getAllDog();
+        const repeated = await TemperamentList.map( t => t.temperaments).toString().replace(/\s+/g, '').split(",").sort();
+        const Temperament_sin_repetidas= [... new Set(repeated)]
+        Temperament_sin_repetidas.forEach(element => {
+            Temperament.findOrCreate({
+                where:{name:element}
+            })
+        });
+        const AllTemperamentLists= await Temperament.findAll();
+        return AllTemperamentLists.map(t => t.name);
+    } catch (error) {
+        console.log(error.message)
+    }
+    
 };
 module.exports={
     getApiInfo,

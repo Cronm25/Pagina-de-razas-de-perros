@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
-import { getDetalle } from "../actions";
+import { getDetalle,BorrarD } from "../actions";
 import NavBar from "./NavBar";
 import "./Detalles_.css"
 
@@ -12,6 +12,9 @@ export default function Detail() {
         dispatch(getDetalle(id));
     }, [dispatch, id]);
 
+    useEffect(() => {
+        return dispatch(BorrarD());
+    }, [dispatch]);
     const Dog_ = useSelector(state => state.Detalle)
     console.log(Dog_);
     return Dog_.image?(<div>
