@@ -91,72 +91,12 @@ router.post('/dogs', async(req,res)=>{
             Crear_Dog.addTemperament(dbTemperament[0]);
         })
         res.status(201).send("Raza creada")
+        //let temperamentos = await Temperament.findAll({
+        //    where: {name : temperaments}
+        //})
+        //await UpdateDog.addTemperament(temperamentos)
     } catch (error){
         console.log(error.message)
-    }
-})
-//router.put("/update/:id",async(req,res)=>{
-//    try {
-//        let id=req.params.id
-//        let {nombre, altura, peso, anios_de_vida, image,temperaments,createdInDb}= req.body;
-//        let UpdateDog = await Dog.update({
-//            nombre,
-//            altura,
-//            peso,
-//            anios_de_vida,
-//            image,
-//            createdInDb
-//        },{
-//        where:{
-//           id
-//        }}
-//        )
-//        let temperamentos = await Temperament.findAll({
-//            where: {name: temperaments}
-//        })
-//        await UpdateDog.addTemperament(temperamentos)
-//        res.status(201).send("Raza actualizada")
-//    } catch (error){
-//        console.log(error.message)
-//    }
-//
-//})
-router.put("/update/:id", async (req,res) => {
-    let id=req.params.id
-    let {nombre, altura, peso, anios_de_vida, image,temperaments,createdInDb}= req.body;
-    let Alltemperaments = await funcion__.getallTemperament();
-    try{
-        let dog = await Dog.findByPk(id)
-        if(dog){
-            let UpdateDog = await dog.update({
-                nombre,
-                altura,
-                peso,
-                anios_de_vida,
-                image,
-                createdInDb
-            })
-                let temperamentos = await Temperament.findAll({
-                    where: {name : temperaments}
-                })
-                await UpdateDog.addTemperament(temperamentos)
-            res.status(200).send("Raza actualizado")
-        }
-    } catch(e){
-        res.status(404).send(e.message)
-    }
-})
-router.delete("/delete/:id",(req ,res)=>{
-    try {
-        let id=req.params.id
-         Dog.destroy({
-            where:{
-                id
-            }
-        })
-        res.status(200).send("Raza Eliminada")
-    } catch (error) {
-        res.status(400).send("La raza no pudo eliminarse")
     }
 })
 module.exports = router;
