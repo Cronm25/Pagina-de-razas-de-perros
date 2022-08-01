@@ -63,9 +63,7 @@ function Validator(post){
 export default function Formulario(){
     const dispatch = useDispatch();
     const temperaments = useSelector(state => state.Temperaments);
-    const [errors,setErrors] = useState({
-        
-    });
+    const [errors,setErrors] = useState({});
     useEffect(()=>{
         dispatch(getTemperaments())
     },[dispatch])

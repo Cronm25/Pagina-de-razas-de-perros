@@ -11,15 +11,15 @@ const router = Router();
 router.get('/dogs',async (req,res)=>{
     const { name } = req.query;
     if(name){
-        try {
+        try { 
                 let Dogs= await funcion__.getAllDog();
                 let DogName = await Dogs.filter(el => el.nombre.toLowerCase().includes(name.toLowerCase()))
                 DogName.length ?
                 res.status(200).json(DogName) : 
-                res.status(404).send("Receta no encontrada")
+                res.status(404).send("Raza no encontrada")
                 
         } catch (error) {
-            console.log(`${error.message}1///`)
+            console.log(`${error.message}1///`) 
         }
     }else{
         try {
@@ -38,7 +38,7 @@ router.get('/dogs/:id',async(req,res)=>{
             const dog= await Dogs.filter(d => d.id == id)
             dog.length ?
             res.status(200).json(dog[0]) : 
-            res.status(404).send("Receta por id no encontrada")
+            res.status(404).send("Raza por id no encontrada")
         }
         res.status(404).send("Ingresa una id")
     } catch (error) {
