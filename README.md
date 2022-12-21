@@ -1,6 +1,5 @@
 <h3 align="left">Solo project:</h3>
 <h4 align="left">This project was made with "SQL, REACT, REDUX, SEQUELIZE, EXPRESS and AXIOS":</h4>
-<h4 align="left">Deploy: https://dogs25.vercel.app/</h4>
 <img src="./imgs/1.png" width="850" height="400">
 <img src="./imgs/2.png" width="850" height="400">
 <img src="./imgs/3.png" width="850" height="150">
